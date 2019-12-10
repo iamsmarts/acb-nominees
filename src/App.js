@@ -33,10 +33,14 @@ class App extends Component {
     let nomineeList;
     if (isActive) {
       nomineeList = this.state.nominees.map((nom, index) => {
+        let active = nom.name === this.state.activeNominee.name;
+        console.log(active);
         return (
           <li
             key={index}
-            className="nav-item nav-link list-inline-item"
+            className={`nav-item nav-link list-inline-item ${
+              active ? "active" : ""
+            }`}
             onClick={() => {
               this.handleClick(index);
             }}
