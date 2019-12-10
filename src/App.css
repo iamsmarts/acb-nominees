@@ -1,38 +1,38 @@
-.App {
+.nominees-list {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nominees-list ul li {
+  color: #02245d;
+  font-weight: bold;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nominees-list ul li:hover {
+  border-bottom: 1px dotted #02245d;
+  box-sizing: border-box;
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.navbar-nav {
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: wrap;
 }
-
-.App-link {
-  color: #61dafb;
+.navbar-light .navbar-nav .nav-link {
+  /* color: #02245d; */
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  line-height: 6px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-nav li:hover {
+  border-bottom: 1px dotted #02245d;
+}
+.nominee-wrap {
+  margin-top: 40px;
+}
+@media only screen and (max-width: 600px) {
+  .navbar-light .navbar-nav .nav-link {
+    line-height: 16px;
   }
-  to {
-    transform: rotate(360deg);
+  .nominee-name {
+    text-align: center;
   }
 }
